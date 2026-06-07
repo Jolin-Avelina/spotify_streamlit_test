@@ -211,5 +211,6 @@ if st.session_state.show_result and both_ready:
         f"Load time {end_uncached_3 - start_uncached_3:.2f}s "
     )
     st.text(benchmark_uncached_2)
-
+    st.write("After using the app at least once, please fill the form below!")
+    st.write("https://forms.gle/HNqYHZuc5TZEyatN9")
     st.button("Start Over", on_click=reset, use_container_width=True)

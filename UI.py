@@ -206,4 +206,6 @@ if st.session_state.show_result and both_ready:
     with cols[1]: st.markdown(f"**{st.session_state.song2}** — end")
 
     st.write("")
+    st.write("After using the app at least once, please fill the form below!")
+    st.write("https://forms.gle/HNqYHZuc5TZEyatN9")
     st.button("Start Over", on_click=reset, use_container_width=True)
