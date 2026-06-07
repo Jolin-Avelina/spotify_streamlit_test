@@ -76,9 +76,10 @@ def decrement():
         st.session_state.n_bridge -= 1
     st.session_state.show_result = False
 
-
+start_uncached_3=time()
 def find_bridges():
     #get a list
+    start_uncached_3 = time()
     song1=st.session_state.song1
     song2=st.session_state.song2
     results = bridge_recommendation(song1, song2, st.session_state.n_bridge)
@@ -204,6 +205,11 @@ if st.session_state.show_result and both_ready:
     cols = st.columns([1, 6])
     with cols[0]: st.markdown("▶")
     with cols[1]: st.markdown(f"**{st.session_state.song2}** — end")
-
+    end_uncached_3 = time()
     st.write("")
+    benchmark_uncached_2 = (
+        f"Load time {end_uncached_3 - start_uncached_3:.2f}s "
+    )
+    st.text(benchmark_uncached_2)
+
     st.button("Start Over", on_click=reset, use_container_width=True)
