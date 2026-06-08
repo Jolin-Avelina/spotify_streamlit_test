@@ -4,10 +4,10 @@ import streamlit as st
 from difflib import SequenceMatcher
 import pickle
 from time import time
-from pyinstrument import Profiler
+# from pyinstrument import Profiler
 
-profiler = Profiler()
-profiler.start()
+# profiler = Profiler()
+# profiler.start()
 
 st.set_page_config(page_title="SongBridge", page_icon="🎵", layout="centered")
 
@@ -220,6 +220,6 @@ if st.session_state.show_result and both_ready:
     st.write("https://forms.gle/HNqYHZuc5TZEyatN9")
     st.button("Start Over", on_click=reset, use_container_width=True)
 
-    # code you want to profile
-    profiler.stop()
-    profiler.print()
+    # # code you want to profile
+    # profiler.stop()
+    # profiler.print()
